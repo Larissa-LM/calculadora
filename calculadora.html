@@ -7,29 +7,30 @@
     <title>Calculadora</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="imagens/claculadora.ico" type="image/x-icon">
+    <script src="./calculadora.js"></script>
 </head>
 <body>
     <div class="container">
-        <input id="display" type="text" name="display" disabled>
+        <input id="display" type="text" disabled>
         <div id="container-numeros">
-            <button class="num" type="button"> 1 </button>
-            <button class="num" type="button"> 2 </button>
-            <button class="num" type="button"> 3 </button>
-            <button class="num" type="button"> 4 </button>  
-            <button class="num" type="button"> 5 </button>  
-            <button class="num" type="button"> 6 </button>  
-            <button class="num" type="button"> 7 </button>  
-            <button class="num" type="button"> 8 </button>  
-            <button class="num" type="button"> 9 </button>  
-            <button class="num" type="button"> 0 </button>  
-            <button class="num" type="button"> . </button> 
+            <button class="num" type="button" id="num-um" value="1" onclick="clickTeclado(this.value)"> 1 </button>
+            <button class="num" type="button" id="num-dois" value="2" onclick="clickTeclado(this.value)"> 2 </button>
+            <button class="num" type="button" id="num-tres" value="3" onclick="clickTeclado(this.value)"> 3 </button>
+            <button class="num" type="button" id="num-quatro" value="4" onclick="clickTeclado(this.value)"> 4 </button>  
+            <button class="num" type="button" id="num-cinco" value="5" onclick="clickTeclado(this.value)"> 5 </button>  
+            <button class="num" type="button" id="num-seis" value="6" onclick="clickTeclado(this.value)"> 6 </button>  
+            <button class="num" type="button" id="num-sete" value="7" onclick="clickTeclado(this.value)"> 7 </button>  
+            <button class="num" type="button" id="num-oito" value="8" onclick="clickTeclado(this.value)"> 8 </button>  
+            <button class="num" type="button" id="num-nove" value="9" onclick="clickTeclado(this.value)"> 9 </button>  
+            <button class="num" type="button" id="num-dez" value="0" onclick="clickTeclado(this.value)"> 0 </button>  
+            <button class="num" type="button" id="ponto" value="." onclick="clickTeclado(this.value)"> . </button> 
         </div> 
         <div id="container-operacoes">
-            <button class="operacoes" type="button"> C </button>
-            <button class="operacoes" type="button"> &#215; </button>
-            <button class="operacoes" type="button"> &#247; </button>
-            <button class="operacoes" type="button"> + </button>
-            <button class="operacoes" type="button"> = </button>
+            <button class="operacoes" type="button" id="bt-limpar" onclick="limpar()"> C </button>
+            <button class="operacoes" type="button" id="bt-multiplicar"> &#215; </button>
+            <button class="operacoes" type="button" id="bt-dividir"> &#247; </button>
+            <button class="operacoes" type="button" id="bt-somar"> + </button>
+            <button class="operacoes" type="button" id="bt-igual"> = </button>
             
         </div>
    
