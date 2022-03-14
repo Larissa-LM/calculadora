@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: 0;
 }
+
 :root{
     --container-color: 	#DDA0DD; 
     --container-numeros: 	#FFC0CB;
@@ -24,6 +25,7 @@
     border-radius: 10px;
     row-gap: 15px;
 }
+
 #display{
     grid-area: display;
     background-color: var(--display-color);
@@ -33,42 +35,50 @@
     font-size: 30px;
     color: black;
 }
+
 #container-numeros{
     grid-area: container-numeros;
     display: flex;
     flex-wrap: wrap;
 }
+
 #container-numeros button{
     height:50px;
     width: 50px;
     margin: 3px;
 
 }
+
 #container-operacoes{
     grid-area: container-operacoes;
     display: flex;
     flex-wrap: wrap;
 }
+
 #container-operacoes button{
     height:80px;
     width: 50px;
     margin: 3px;
 }
+
 .num{
     background-color: var(--container-numeros);
     padding: 10px;
     border-radius: 6px;
     border-color: var(--container-numeros);
 }
+
 .operacoes{
     background-color: var(--container-operacoes);
     padding: 10px;
     border-radius: 6px;
     border-color: var(--container-operacoes);
 }
+
 button{
     font-size: 25px;
 }
+
 #direitos{
     display: flex;
     justify-content: center;
