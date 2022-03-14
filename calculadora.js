@@ -40,7 +40,6 @@ function soma(){
   }
 
   operacao = "+"; 
-  //console.log("recebendo resultado" + resultado);
   document.getElementById("display").value = " ";
 }
 
@@ -53,13 +52,38 @@ function subtracao() {
   }
 
   operacao="-";
-  console.log("recebendo resultado" + resultado);
+  //console.log("recebendo resultado" + resultado);
   document.getElementById("display").value = " ";
 }
 
-function multiplicacao (){}
+function multiplicacao (){
 
-function divisao(){}
+  if(resultado == null){
+    resultado = numero;
+  }else {
+    verificarOperacao(); 
+  }
+
+  operacao="*";
+  console.log("recebendo resultado" + resultado);
+  document.getElementById("display").value = " ";
+
+}
+
+function divisao(){
+
+  if(resultado == null){
+    resultado = numero;
+  }else {
+    verificarOperacao(); 
+  }
+
+  operacao="/";
+  console.log("recebendo resultado" + resultado);
+  document.getElementById("display").value = " ";
+
+}
+
 function mostraResultado(){
 
   console.log(operacao);
@@ -70,6 +94,12 @@ function mostraResultado(){
       break;
     case "-":
       subtracao();
+      break;
+    case "*":
+      multiplicacao();
+      break;
+    case "/":
+      divisao();
       break;
   } 
 
