@@ -14,13 +14,13 @@ function limpar() {
   numero = 0;
   resultado = null;
 
-  let listaDeBotoes = document.getElementsByClassName("num");
-  for( let i = 0; i < listaDeBotoes.length; i++){
+  // let listaDeBotoes = document.getElementsByClassName("num");
+  // for( let i = 0; i < listaDeBotoes.length; i++){
 
-    listaDeBotoes[i].disabled = false;
+  //   listaDeBotoes[i].disabled = false;
 
-  }
-  document.getElementById("bt-igual").disabled = false;
+  // }
+  // document.getElementById("bt-igual").disabled = false;
 
 }
 function verificarOperacao(){
@@ -93,16 +93,16 @@ function divisao(){
 
 }
 
-function desabilitar(){
-  let listaDeBotoes = document.getElementsByClassName("num");
-  for( let i = 0; i < listaDeBotoes.length; i++){
+// function desabilitar(){
+//   let listaDeBotoes = document.getElementsByClassName("num");
+//   for( let i = 0; i < listaDeBotoes.length; i++){
 
-    listaDeBotoes[i].disabled = true;
+//     listaDeBotoes[i].disabled = true;
 
-  }
-  document.getElementById("bt-igual").disabled = true;
+//   }
+//   document.getElementById("bt-igual").disabled = true;
   
-}
+// }
 
 function mostraResultado(){
 
@@ -122,6 +122,5 @@ function mostraResultado(){
   } 
   document.getElementById("display").value = resultado.toString();
 
-  desabilitar();
 
 }
