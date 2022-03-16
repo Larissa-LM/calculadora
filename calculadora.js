@@ -4,7 +4,15 @@ let resultado = null;
 let operacao =" " ;
 
 function clickTeclado(num){
-  document.getElementById("display").value += num;
+  if(num == "."){
+    if(document.getElementById("display").value.includes(num)){
+        num =" ";
+    }else{
+        document.getElementById("display").value += num;
+    }
+  }else{
+    document.getElementById("display").value += num;
+  }
   numero = Number(document.getElementById("display").value);
 
 }
@@ -26,7 +34,9 @@ function limpar() {
 function verificarOperacao(){
   switch(operacao){
     case "+":
+      console.log("verificaoperacao" + numero);
       resultado += numero;
+      console.log("resultado soma" + " " + resultado);
       break;
     case "-":
       resultado -= numero;
@@ -37,15 +47,20 @@ function verificarOperacao(){
     case "/":
       resultado /= numero;
       break;
+      
   }
+  let resultado1 = resultado.toFixed(2).toString();
+  return resultado1;
 }
 function soma(){
 
   if(resultado == null){
+    console.log("null" + resultado);
     resultado = numero;
-
+    console.log("resultado = numero" + resultado);
   }else {
     verificarOperacao();
+    console.log("entrou no else verificaroperacao" + resultado);
   }
 
   operacao = "+"; 
@@ -106,21 +121,7 @@ function divisao(){
 
 function mostraResultado(){
 
-  switch(operacao){
-    case "+":
-      soma();
-      break;
-    case "-":
-      subtracao();
-      break;
-    case "*":
-      multiplicacao();
-      break;
-    case "/":
-      divisao();
-      break;
-  } 
-  document.getElementById("display").value = resultado.toString();
 
+ document.getElementById("display").value = verificarOperacao();
 
 }
