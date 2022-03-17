@@ -4,12 +4,8 @@ let resultado = null;
 let operacao =" " ;
 
 function clickTeclado(num){
-  if(num == "."){
-    if(document.getElementById("display").value.includes(num)){
+  if(num === "." && document.getElementById("display").value.includes(num)){
         num =" ";
-    }else{
-        document.getElementById("display").value += num;
-    }
   }else{
     document.getElementById("display").value += num;
   }
