@@ -18,14 +18,6 @@ function limpar() {
   numero = 0;
   resultado = null;
 
-  // let listaDeBotoes = document.getElementsByClassName("num");
-  // for( let i = 0; i < listaDeBotoes.length; i++){
-
-  //   listaDeBotoes[i].disabled = false;
-
-  // }
-  // document.getElementById("bt-igual").disabled = false;
-
 }
 function verificarOperacao(){
   switch(operacao){
@@ -42,8 +34,7 @@ function verificarOperacao(){
       break;
     case "/":
       resultado /= numero;
-      break;
-      
+      break;  
   }
   let resultado1 = resultado.toFixed(2).toString();
   return resultado1;
@@ -51,9 +42,7 @@ function verificarOperacao(){
 function soma(){
 
   if(resultado == null){
-    console.log("null" + resultado);
     resultado = numero;
-    console.log("resultado = numero" + resultado);
   }else {
     verificarOperacao();
     console.log("entrou no else verificaroperacao" + resultado);
@@ -72,7 +61,7 @@ function subtracao() {
   }
 
   operacao="-";
-  //console.log("recebendo resultado" + resultado);
+  
   document.getElementById("display").value = " ";
 }
 
@@ -104,20 +93,11 @@ function divisao(){
 
 }
 
-// function desabilitar(){
-//   let listaDeBotoes = document.getElementsByClassName("num");
-//   for( let i = 0; i < listaDeBotoes.length; i++){
-
-//     listaDeBotoes[i].disabled = true;
-
-//   }
-//   document.getElementById("bt-igual").disabled = true;
-  
-// }
-
 function mostraResultado(){
 
+  document.getElementById("display").value = verificarOperacao();
 
- document.getElementById("display").value = verificarOperacao();
+  operacao = " ";
 
 }
+
