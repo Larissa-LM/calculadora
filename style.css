@@ -11,6 +11,10 @@
     --display-color: #C0C0C0;
 }
 
+body{
+    background: linear-gradient(to right, #FFC0CB,#FF69B4);
+}
+
 .container{
     display: grid;
     background-color: var(--container-color);
